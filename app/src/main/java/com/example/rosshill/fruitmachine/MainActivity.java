@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
         welcomeBox = findViewById(R.id.textView);
         welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
-//
-//        new_game.fruitMachine.getRandomSymbols();
-//
-//        reel1A = findViewById(R.id.reel1A);
-//        reel1A.setText(String.valueOf(reel1A));
-
-
     }
-}
+
+        public void onSpinButtonClick(View spin_button) {
+            fruitMachine.getRandomSymbols();
+            reel1A = findViewById(R.id.reel1A);
+            reel1A.setText(String.valueOf(reel1A));
+        }
+    }
+

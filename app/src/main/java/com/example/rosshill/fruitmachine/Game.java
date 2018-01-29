@@ -50,6 +50,5 @@ public class Game {
         return "Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0";
     }
 
-
     }
 
