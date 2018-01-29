@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FruitMachine</string>
+    <string name="spin_button">Spin</string>
+    <string name="bar_symbol">Bar</string>
+    <string name="orange_symbol">Orange</string>
+    <string name="lemon_symbol">Lemon</string>
+    <string name="cherry_symbol">Cherry</string>
+    <string name="diamond_symbol">Diamond</string>
+    <string name="wallet_text">Welcome  + player.getName() + ", your balance is " + player.getWallet()</string>
+</resources>
