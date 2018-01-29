@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         public void onSpinButtonClick(View spin_button) {
             fruitMachine.getRandomSymbols();
+
+
             reel1A = findViewById(R.id.reel1A);
             reel1A.setText(String.valueOf(reel1A));
         }

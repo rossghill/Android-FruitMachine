@@ -57,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toEndOf="@+id/reel1A"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.903" />
 
     <TextView
         android:id="@+id/reel3A"
@@ -71,7 +71,7 @@
         app:layout_constraintBottom_toTopOf="@+id/reel3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.951" />
 
     <TextView
         android:id="@+id/reel3B"
@@ -100,7 +100,7 @@
         android:layout_width="86dp"
         android:layout_height="78dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
@@ -108,7 +108,7 @@
         app:layout_constraintBottom_toTopOf="@+id/reel1B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.901" />
 
     <TextView
         android:id="@+id/textView"
@@ -167,8 +167,16 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165" />
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/status_box"
+        android:layout_width="325dp"
+        android:layout_height="29dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="102dp" />
 </android.support.constraint.ConstraintLayout>

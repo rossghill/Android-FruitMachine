@@ -20,9 +20,9 @@ public class Game {
 
     public void startGame() {
         Scanner reader = new Scanner(System.in);
-        welcomeMessage();
+//        welcomeMessage();
         while (player.getWallet() > 0) {
-            System.out.println("Type SPIN to play or QUIT to end game");
+//            System.out.println("Type SPIN to play or QUIT to end game");
             System.out.println("Your current balance is: £" + player.getWallet() + "0");
             String selection;
             selection = reader.next();
@@ -31,10 +31,10 @@ public class Game {
                 player.spendMoney(0.5);
                 int result = fruitMachine.spin();
                 if (result > 0) {
-                    System.out.println("Congrats! You won £");
+//                    System.out.println("Congrats! You won £");
                     player.wallet += result;
                 } else {
-                    System.out.println("Sorry, you lost");
+//                    System.out.println("Sorry, you lost");
                 }
 
             } else if (selection.equals("QUIT")) {
