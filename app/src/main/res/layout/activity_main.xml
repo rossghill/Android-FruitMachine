@@ -10,96 +10,148 @@
         android:id="@+id/reel3C"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="28dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/reel2B"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintBottom_toTopOf="@+id/reel2C"
+        app:layout_constraintEnd_toStartOf="@+id/reel3B" />
 
     <TextView
         android:id="@+id/reel1C"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reel2C"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/reel2A"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintBottom_toTopOf="@+id/reel2B"
+        app:layout_constraintEnd_toStartOf="@+id/reel3A"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/reel1A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808" />
 
     <TextView
         android:id="@+id/reel3A"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintBottom_toTopOf="@+id/reel3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808" />
 
     <TextView
         android:id="@+id/reel3B"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="28dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintBottom_toTopOf="@+id/reel3C"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/reel2C"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="52dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reel3C" />
 
     <TextView
         android:id="@+id/reel1A"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
         android:textColorLink="@android:color/black"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintBottom_toTopOf="@+id/reel1B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="276dp"
-        android:layout_height="38dp"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="25dp" />
+        android:layout_width="312dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
         android:id="@+id/reel1B"
         android:layout_width="86dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:background="@android:color/holo_red_light"
         android:backgroundTint="@android:color/holo_red_light"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintBottom_toTopOf="@+id/reel1C"
+        app:layout_constraintEnd_toStartOf="@+id/reel2B"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/spin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/spin_button"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="430dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982" />
 </android.support.constraint.ConstraintLayout>
