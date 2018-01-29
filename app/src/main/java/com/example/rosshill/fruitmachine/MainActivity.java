@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     Player player1;
     FruitMachine fruitMachine;
     TextView welcomeBox;
+    TextView statusBox;
+
     TextView reel1A;
     TextView reel1B;
     TextView reel1C;
@@ -36,11 +38,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
         public void onSpinButtonClick(View spin_button) {
-            fruitMachine.getRandomSymbols();
+            new_game.startGame();
+            statusBox = findViewById(R.id.status_box);
+            statusBox.setText(R.string.lose_text);
 
-
-            reel1A = findViewById(R.id.reel1A);
-            reel1A.setText(String.valueOf(reel1A));
+            welcomeBox = findViewById(R.id.textView);
+            welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
+//
+//            reel1A = findViewById(R.id.reel1A);
+//            reel1A.setText(String.valueOf(reel1A));
         }
     }
 
