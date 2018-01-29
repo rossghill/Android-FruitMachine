@@ -10,12 +10,35 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity {
 
     Game new_game;
-    TextView textView;
+    Player player1;
+    FruitMachine fruitMachine;
+    TextView welcomeBox;
+    TextView reel1A;
+    TextView reel1B;
+    TextView reel1C;
+    TextView reel2A;
+    TextView reel2B;
+    TextView reel2C;
+    TextView reel3A;
+    TextView reel3B;
+    TextView reel3C;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        player1 = new Player("Ross", 2.50);
+        new_game = new Game(fruitMachine, player1);
+
+        welcomeBox = findViewById(R.id.textView);
+        welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
+//
+//        new_game.fruitMachine.getRandomSymbols();
+//
+//        reel1A = findViewById(R.id.reel1A);
+//        reel1A.setText(String.valueOf(reel1A));
+
 
     }
 }

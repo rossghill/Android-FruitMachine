@@ -13,28 +13,27 @@ public class Game {
     FruitMachine fruitMachine;
     Player player;
 
-    public Game(FruitMachine fruitMachineFull, Player player) {
-        this.fruitMachine = fruitMachineFull;
+    public Game(FruitMachine fruitMachine, Player player) {
+        this.fruitMachine = fruitMachine;
         this.player = player;
     }
 
     public void startGame() {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0");
+        welcomeMessage();
         while (player.getWallet() > 0) {
             System.out.println("Type SPIN to play or QUIT to end game");
             System.out.println("Your current balance is: £" + player.getWallet() + "0");
             String selection;
             selection = reader.next();
             selection = selection.toUpperCase();
-            if (selection.equals("SPIN") ) {
+            if (selection.equals("SPIN")) {
                 player.spendMoney(0.5);
                 int result = fruitMachine.spin();
                 if (result > 0) {
                     System.out.println("Congrats! You won £");
                     player.wallet += result;
-                }
-                else {
+                } else {
                     System.out.println("Sorry, you lost");
                 }
 
@@ -47,5 +46,10 @@ public class Game {
         }
 
     }
+    public String welcomeMessage() {
+        return "Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0";
+    }
 
-}
+
+    }
+
