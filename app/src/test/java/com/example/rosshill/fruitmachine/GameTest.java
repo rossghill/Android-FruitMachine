@@ -32,6 +32,12 @@ public class GameTest {
     }
 
     @Test
+    public void playerCanSpendMoney() {
+        game.startGame();
+        assertEquals(2.00, game.player.getWallet(),0.01);
+    }
+
+    @Test
     public void fruitMachineCanAddReels() {
         assertEquals(10, game.fruitMachine.reel1.size());
         assertEquals(10, game.fruitMachine.reel2.size());
@@ -41,5 +47,10 @@ public class GameTest {
     @Test
     public void fruitMachineSetsThreeReelArrays() {
         assertEquals(3, game.fruitMachine.getPlayfield().size());
+    }
+
+    @Test
+    public void canCalculateWinnings() {
+        assertEquals(750, game.fruitMachine.calculateWinnings(Symbol.GOLD));
     }
 }

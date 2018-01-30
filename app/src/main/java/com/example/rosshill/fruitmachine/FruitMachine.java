@@ -86,7 +86,6 @@ public class FruitMachine {
     public int spin() {
 
         ArrayList<ArrayList<Symbol>> playfield = getPlayfield();
-//        System.out.println(playfield);
         if (playfield.get(0).get(0).equals(playfield.get(1).get(1)) && playfield.get(1).get(1).equals(playfield.get(2).get(2))) {
             return calculateWinnings(playfield.get(1).get(1));
         } else if (playfield.get(0).get(1).equals(playfield.get(1).get(1)) && playfield.get(1).get(1).equals(playfield.get(2).get(1))) {
