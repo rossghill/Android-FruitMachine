@@ -3,6 +3,7 @@ package com.example.rosshill.fruitmachine;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Scanner;
@@ -14,16 +15,6 @@ public class MainActivity extends AppCompatActivity {
     FruitMachine fruitMachine;
     TextView welcomeBox;
     TextView statusBox;
-
-    TextView reel1A;
-    TextView reel1B;
-    TextView reel1C;
-    TextView reel2A;
-    TextView reel2B;
-    TextView reel2C;
-    TextView reel3A;
-    TextView reel3B;
-    TextView reel3C;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +29,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
         public void onSpinButtonClick(View spin_button) {
+
+                ImageView reel10img = (ImageView) findViewById(R.id.reel1_0);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel11img = (ImageView) findViewById(R.id.reel1_1);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel12img = (ImageView) findViewById(R.id.reel1_2);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel20img = (ImageView) findViewById(R.id.reel2_0);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel21img = (ImageView) findViewById(R.id.reel2_1);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel22img = (ImageView) findViewById(R.id.reel2_2);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel30img = (ImageView) findViewById(R.id.reel3_0);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel31img = (ImageView) findViewById(R.id.reel3_1);
+                reel10img.setImageResource(R.drawable.cherry);
+                ImageView reel32img = (ImageView) findViewById(R.id.reel3_2);
+                reel10img.setImageResource(R.drawable.cherry);
 
 
 //            int winnings = new_game.startGame();
