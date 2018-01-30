@@ -43,10 +43,6 @@ public class FruitMachine {
         Collections.shuffle(reel3);
     }
 
-    public Symbol getSymbol(ArrayList reel, int position) {
-        return reel.get(position);
-    }
-
 
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 
@@ -60,32 +56,48 @@ public class FruitMachine {
 
         Random random = new Random();
         int randomPosition = random.nextInt (reel1.size());
-        Random random2 = new Random();
-        int randomPosition2 = random2.nextInt (reel2.size());
-        Random random3 = new Random();
-        int randomPosition3 = random3.nextInt (reel3.size());
+        int upperNeighbour;
+        int lowerNeighbour;
 
+            if (randomPosition == 0) {
+                upperNeighbour = reel1.size();
+                lowerNeighbour = randomPosition + 1;}
+            else if (randomPosition == reel1.size())  {
+                upperNeighbour = randomPosition - 1;
+                lowerNeighbour = 0;}
+            else {
+                upperNeighbour = randomPosition - 1;
+                lowerNeighbour = randomPosition + 1;
+                }
+            return playfield;
+            }
 
-        reel1selection.add(reel1.get(randomPosition -1));
-        reel1selection.add(reel1.get(randomPosition));
-        reel1selection.add(reel1.get(randomPosition + 1));
+//        Random random2 = new Random();
+//        int randomPosition2 = random2.nextInt (reel2.size());
+//        Random random3 = new Random();
+//        int randomPosition3 = random3.nextInt (reel3.size());
+//
+//
+//        reel1selection.add(reel1.get(randomPosition -1));
+//        reel1selection.add(reel1.get(randomPosition));
+//        reel1selection.add(reel1.get(randomPosition + 1));
+//
+//        reel2selection.add(reel2.get(randomPosition2 - 1));
+//        reel2selection.add(reel2.get(randomPosition2));
+//        reel2selection.add(reel2.get(randomPosition2 + 1));
+//
+//        reel3selection.add(reel3.get(randomPosition3 - 1));
+//        reel3selection.add(reel3.get(randomPosition3));
+//        reel3selection.add(reel3.get(randomPosition3 + 1));
 
-        reel2selection.add(reel2.get(randomPosition2 - 1));
-        reel2selection.add(reel2.get(randomPosition2));
-        reel2selection.add(reel2.get(randomPosition2 + 1));
+//        ArrayList playfield = new ArrayList<ArrayList>();
+//
+//        playfield.add(reel1selection);
+//        playfield.add(reel2selection);
+//        playfield.add(reel3selection);
+//
+//        return playfield;
 
-        reel3selection.add(reel3.get(randomPosition3 - 1));
-        reel3selection.add(reel3.get(randomPosition3));
-        reel3selection.add(reel3.get(randomPosition3 + 1));
-
-        ArrayList playfield = new ArrayList<ArrayList>();
-
-        playfield.add(reel1selection);
-        playfield.add(reel2selection);
-        playfield.add(reel3selection);
-
-        return playfield;
-    }
 
     public int spin() {
 

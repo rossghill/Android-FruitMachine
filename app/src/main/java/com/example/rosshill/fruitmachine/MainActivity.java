@@ -1,5 +1,6 @@
 package com.example.rosshill.fruitmachine;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        fruitMachine = new FruitMachine();
+
         player1 = new Player("Ross", 2.50);
         new_game = new Game(fruitMachine, player1);
 
@@ -32,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         public void onSpinButtonClick(View spin_button) {
 
-                ImageView reel10img = (ImageView) findViewById(R.id.reel1_0);
-                reel10img.setImageResource(fruitMachine.getSymbol(reel1, 0));
+                ImageView reel10img = findViewById(R.id.reel1_0);
+                reel10img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(0).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+
+//                reel10img.setImageResource(fruitMachine.getSymbol(reel1, 0));
 
 //                ImageView reel11img = (ImageView) findViewById(R.id.reel1_1);
 //                reel10img.setImageResource(R.drawable.cherry);
@@ -63,11 +68,10 @@ public class MainActivity extends AppCompatActivity {
 //
 ////            fruitMachine.
 //
+
         }
     }
 
-    if (fruitMachine.getSymbol(reel1, 0) == Symbol.CHERRY) {
-            reel10img.setImageResource(R.drawable.cherry);
-            }
+
 
 
