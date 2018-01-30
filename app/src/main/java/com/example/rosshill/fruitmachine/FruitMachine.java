@@ -11,9 +11,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class FruitMachine {
 
-    private ArrayList<Symbol> reel1;
-    private ArrayList<Symbol> reel2;
-    private ArrayList<Symbol> reel3;
+    public ArrayList<Symbol> reel1;
+    public ArrayList<Symbol> reel2;
+    public ArrayList<Symbol> reel3;
 
 
     public FruitMachine() {
@@ -44,7 +44,6 @@ public class FruitMachine {
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 // TODO: 30/01/2018 make the function take in the random numbers so its testable
 
-        setupReels();
 
         ArrayList reel1selection = assignPosition();
         ArrayList reel2selection = assignPosition();

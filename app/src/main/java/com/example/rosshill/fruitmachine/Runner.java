@@ -13,9 +13,7 @@ public class Runner {
         FruitMachine fruitMachine = new FruitMachine();
         Player player = new Player("Ross", 2.50);
         Game game = new Game(fruitMachine, player);
-//        game.startGame();
-        System.out.println(game.fruitMachine.spin());
-//        System.out.println(game.fruitMachine.getSymbol(reel1, 0));
+        System.out.println(game.fruitMachine.getPlayfield());
 
     }
 }
