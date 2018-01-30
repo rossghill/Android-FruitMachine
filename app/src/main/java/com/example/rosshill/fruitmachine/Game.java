@@ -21,16 +21,17 @@ public class Game {
     public String welcomeMessage() {
         return "Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0";
     }
+}
 
-    public int startGame() {
-        player.spendMoney(0.50);
-        int result = fruitMachine.spin();
-        if (result > 0) {
-            return result;}
-        else {
-            return 0;}
-        }
-    }
+//    public int startGame() {
+//        player.spendMoney(0.50);
+//        int result = fruitMachine.spin();
+//        if (result > 0) {
+//            return result;}
+//        else {
+//            return 0;}
+//        }
+//    }
 
 //    public void startGame() {
 //        Scanner reader = new Scanner(System.in);

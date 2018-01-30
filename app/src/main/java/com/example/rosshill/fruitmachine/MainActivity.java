@@ -37,17 +37,17 @@ public class MainActivity extends AppCompatActivity {
         welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
     }
 
-        public void onSpinButtonClick(View spin_button) {
-            int winnings = new_game.startGame();
-
-            statusBox = findViewById(R.id.status_box);
-            statusBox.setText(String.valueOf(winnings));
-
-            welcomeBox = findViewById(R.id.textView);
-            welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
-
-//            fruitMachine.
-
-        }
+//        public void onSpinButtonClick(View spin_button) {
+//            int winnings = new_game.startGame();
+//
+//            statusBox = findViewById(R.id.status_box);
+//            statusBox.setText(String.valueOf(winnings));
+//
+//            welcomeBox = findViewById(R.id.textView);
+//            welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
+//
+////            fruitMachine.
+//
+//        }
     }
 

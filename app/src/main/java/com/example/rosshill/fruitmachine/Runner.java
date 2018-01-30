@@ -14,7 +14,7 @@ public class Runner {
         Player player = new Player("Ross", 2.50);
         Game game = new Game(fruitMachine, player);
 //        game.startGame();
-//        game.fruitMachine.getRandomSymbol(reel1A);
+        System.out.println(game.fruitMachine.getPlayfield());
 
     }
 }
