@@ -24,18 +24,6 @@ public class FruitMachine {
         setupReels();
     }
 
-    public ArrayList<Symbol> getReel1Symbols() {
-        return reel1;
-    }
-
-    public ArrayList<Symbol> getReel2Symbols() {
-        return reel2;
-    }
-
-    public ArrayList<Symbol> getReel3Symbols() {
-        return reel3;
-    }
-
 
     public void setupReels() {
         this.reel1.add(Symbol.CHERRY);
@@ -55,9 +43,14 @@ public class FruitMachine {
         Collections.shuffle(reel3);
     }
 
+    public Symbol getSymbol(ArrayList reel, int position) {
+        return reel.get(position);
+    }
+
+
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 
-//NEED TO FIX PROBLEM WITH MINUS RESULTS
+        //NEED TO FIX PROBLEM WITH MINUS RESULTS
 
         setupReels();
 

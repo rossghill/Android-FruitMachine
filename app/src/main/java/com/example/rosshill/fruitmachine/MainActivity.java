@@ -26,28 +26,31 @@ public class MainActivity extends AppCompatActivity {
 
         welcomeBox = findViewById(R.id.textView);
         welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
+
+        fruitMachine.getPlayfield();
     }
 
         public void onSpinButtonClick(View spin_button) {
 
                 ImageView reel10img = (ImageView) findViewById(R.id.reel1_0);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel11img = (ImageView) findViewById(R.id.reel1_1);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel12img = (ImageView) findViewById(R.id.reel1_2);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel20img = (ImageView) findViewById(R.id.reel2_0);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel21img = (ImageView) findViewById(R.id.reel2_1);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel22img = (ImageView) findViewById(R.id.reel2_2);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel30img = (ImageView) findViewById(R.id.reel3_0);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel31img = (ImageView) findViewById(R.id.reel3_1);
-                reel10img.setImageResource(R.drawable.cherry);
-                ImageView reel32img = (ImageView) findViewById(R.id.reel3_2);
-                reel10img.setImageResource(R.drawable.cherry);
+                reel10img.setImageResource(fruitMachine.getSymbol(reel1, 0));
+
+//                ImageView reel11img = (ImageView) findViewById(R.id.reel1_1);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel12img = (ImageView) findViewById(R.id.reel1_2);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel20img = (ImageView) findViewById(R.id.reel2_0);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel21img = (ImageView) findViewById(R.id.reel2_1);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel22img = (ImageView) findViewById(R.id.reel2_2);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel30img = (ImageView) findViewById(R.id.reel3_0);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel31img = (ImageView) findViewById(R.id.reel3_1);
+//                reel10img.setImageResource(R.drawable.cherry);
+//                ImageView reel32img = (ImageView) findViewById(R.id.reel3_2);
+//                reel10img.setImageResource(R.drawable.cherry);
 
 
 //            int winnings = new_game.startGame();
@@ -62,4 +65,9 @@ public class MainActivity extends AppCompatActivity {
 //
         }
     }
+
+    if (fruitMachine.getSymbol(reel1, 0) == Symbol.CHERRY) {
+            reel10img.setImageResource(R.drawable.cherry);
+            }
+
 
