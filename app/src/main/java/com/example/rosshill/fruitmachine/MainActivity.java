@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSpinButtonClick(View spin_button) {
 
+//        setUpReelImages(fruitmachine)
+//        checkForWinnings()
+
+
         ImageView reel10img = findViewById(R.id.reel1_0);
         reel10img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(0).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel11img = findViewById(R.id.reel1_1);
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         reel30img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel31img = findViewById(R.id.reel3_1);
         reel31img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
-        ImageView reel32img = findViewById(R.id.reel3_2;
+        ImageView reel32img = findViewById(R.id.reel3_2);
         reel32img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
 
 
