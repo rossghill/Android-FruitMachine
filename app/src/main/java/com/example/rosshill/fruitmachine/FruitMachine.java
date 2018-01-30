@@ -46,8 +46,6 @@ public class FruitMachine {
 
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 
-        //NEED TO FIX PROBLEM WITH MINUS RESULTS
-
         setupReels();
 
         ArrayList reel1selection = new ArrayList();
@@ -69,6 +67,15 @@ public class FruitMachine {
                 upperNeighbour = randomPosition - 1;
                 lowerNeighbour = randomPosition + 1;
                 }
+
+            reel1selection.add(upperNeighbour);
+            reel1selection.add(randomPosition);
+            reel1selection.add(lowerNeighbour);
+
+        ArrayList playfield = new ArrayList<ArrayList>();
+
+        playfield.add(reel1selection);
+
             return playfield;
             }
 
