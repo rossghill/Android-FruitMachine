@@ -57,6 +57,8 @@ public class FruitMachine {
 
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 
+//NEED TO FIX PROBLEM WITH MINUS RESULTS
+
         setupReels();
 
         ArrayList reel1selection = new ArrayList();
@@ -92,19 +94,19 @@ public class FruitMachine {
         return playfield;
     }
 
-//    public int spin() {
-//
-//        playfield = getPlayField();
-//        if (reel1A.equals(reel1.get(0)) && reel2B.equals(reel3C)) {
-//            return win(reel1A, reel2B, reel3C);
-//        } else if (reel1B.equals(reel2B) && reel2B.equals(reel3B)) {
-//            return win(reel1B, reel2B, reel3B);
-//        } else if (reel1C.equals(reel2B) && reel2B.equals(reel3A)) {
-//            return win(reel1C, reel2B, reel3A);
-//        } else {
-//            return lose();
-//        }
-//    }
+    public int spin() {
+
+        playfield = getPlayField();
+        if (reel1.get(0).equals(reel2.get(1)) && reel1.get(1).equals(reel3.get(2))) {
+            return win(reel1.get(0), reel2.get(1), reel3.get(2));
+        } else if (reel1.get(1).equals(reel2.get(1)) && reel2.get(1).equals(reel3.get(1))) {
+            return win(reel1.get(1), reel2.get(1),reel3.get(1));
+        } else if (reel1.get(2).equals(reel2.get(1)) && reel2.get(1).equals(reel3.get(0))) {
+            return win(reel1.get(2), reel2.get(1), reel3.get(0));
+        } else {
+            return lose();
+        }
+    }
 
     public int win(Symbol winningReel1, Symbol winningReel2, Symbol winningReel3) {
         int value1 = winningReel1.getValue();
