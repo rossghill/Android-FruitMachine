@@ -43,39 +43,45 @@ public class FruitMachine {
 
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 // TODO: 30/01/2018 make the function take in the random numbers so its testable
-// TODO: 30/01/2018  move random maker logic to its own function
 
         setupReels();
 
-        ArrayList reel1selection = new ArrayList();
-        ArrayList reel2selection = new ArrayList();
-        ArrayList reel3selection = new ArrayList();
-
-        Random random = new Random();
-        int randomPosition = random.nextInt (reel1.size());
-        int upperNeighbour;
-        int lowerNeighbour;
-
-            if (randomPosition == 0) {
-                upperNeighbour = reel1.size();
-                lowerNeighbour = randomPosition + 1;}
-            else if (randomPosition == reel1.size() - 1)  {
-                upperNeighbour = randomPosition - 1;
-                lowerNeighbour = 0;}
-            else {
-                upperNeighbour = randomPosition - 1;
-                lowerNeighbour = randomPosition + 1;
-                }
-
-            reel1selection.add(upperNeighbour);
-            reel1selection.add(randomPosition);
-            reel1selection.add(lowerNeighbour);
+        ArrayList reel1selection = assignPosition();
+        ArrayList reel2selection = assignPosition();
+        ArrayList reel3selection = assignPosition();
 
         ArrayList playfield = new ArrayList<ArrayList>();
 
         playfield.add(reel1selection);
+        playfield.add(reel2selection);
+        playfield.add(reel3selection);
 
-            return playfield;
+        return playfield;
+    }
+
+    public ArrayList assignPosition() {
+        Random random = new Random();
+        int randomPosition = random.nextInt (reel1.size());
+        int upperNeighbour;
+        int lowerNeighbour;
+        ArrayList reelselection = new ArrayList();
+
+        if (randomPosition == 0) {
+            upperNeighbour = reel1.size();
+            lowerNeighbour = randomPosition + 1;}
+        else if (randomPosition == reel1.size() - 1)  {
+            upperNeighbour = randomPosition - 1;
+            lowerNeighbour = 0;}
+        else {
+            upperNeighbour = randomPosition - 1;
+            lowerNeighbour = randomPosition + 1;
+        }
+
+        reelselection.add(upperNeighbour);
+        reelselection.add(randomPosition);
+        reelselection.add(lowerNeighbour);
+
+        return reelselection;
             }
 
     public int spin() {
