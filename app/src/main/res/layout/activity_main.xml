@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/vegas"
     tools:context="com.example.rosshill.fruitmachine.MainActivity">
 
     <TextView
@@ -156,4 +157,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reel3-1"
         app:srcCompat="@drawable/orange" />
+
+
 </android.support.constraint.ConstraintLayout>

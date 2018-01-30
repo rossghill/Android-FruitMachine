@@ -14,7 +14,6 @@ public class FruitMachine {
     private ArrayList<Symbol> reel1;
     private ArrayList<Symbol> reel2;
     private ArrayList<Symbol> reel3;
-//    private ArrayList<Symbol> symbolArrayList;
 
 
     public FruitMachine() {
@@ -23,7 +22,6 @@ public class FruitMachine {
         this.reel3 = new ArrayList<>();
         setupReels();
     }
-
 
     public void setupReels() {
         this.reel1.add(Symbol.CHERRY);
@@ -43,9 +41,10 @@ public class FruitMachine {
         Collections.shuffle(reel3);
     }
 
-
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
-// TODO: 30/01/2018 make the function take in the random numbers so its testable 
+// TODO: 30/01/2018 make the function take in the random numbers so its testable
+// TODO: 30/01/2018  move random maker logic to its own function
+
         setupReels();
 
         ArrayList reel1selection = new ArrayList();
@@ -78,7 +77,6 @@ public class FruitMachine {
 
             return playfield;
             }
-
 
     public int spin() {
 
