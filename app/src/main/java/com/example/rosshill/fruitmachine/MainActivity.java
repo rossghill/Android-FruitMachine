@@ -38,15 +38,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
         public void onSpinButtonClick(View spin_button) {
-            new_game.startGame();
+            int winnings = new_game.startGame();
+
             statusBox = findViewById(R.id.status_box);
-            statusBox.setText(R.string.lose_text);
+            statusBox.setText(String.valueOf(winnings));
 
             welcomeBox = findViewById(R.id.textView);
             welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
-//
-//            reel1A = findViewById(R.id.reel1A);
-//            reel1A.setText(String.valueOf(reel1A));
+
+//            fruitMachine.
+
         }
     }
 

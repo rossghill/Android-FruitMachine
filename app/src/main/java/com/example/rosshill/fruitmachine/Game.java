@@ -22,8 +22,14 @@ public class Game {
         return "Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0";
     }
 
-    public void startGame() {
+    public int startGame() {
         player.spendMoney(0.50);
+        int result = fruitMachine.spin();
+        if (result > 0) {
+            return result;}
+        else {
+            return 0;}
+        }
     }
 
 //    public void startGame() {
@@ -53,6 +59,4 @@ public class Game {
 //            }
 //        }
 
-
-    }
 
