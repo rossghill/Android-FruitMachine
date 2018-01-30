@@ -37,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
         welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
     }
 
-//        public void onSpinButtonClick(View spin_button) {
+        public void onSpinButtonClick(View spin_button) {
+
+
 //            int winnings = new_game.startGame();
 //
 //            statusBox = findViewById(R.id.status_box);
@@ -48,6 +50,6 @@ public class MainActivity extends AppCompatActivity {
 //
 ////            fruitMachine.
 //
-//        }
+        }
     }
 

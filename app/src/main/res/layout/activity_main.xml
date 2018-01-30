@@ -7,110 +7,6 @@
     tools:context="com.example.rosshill.fruitmachine.MainActivity">
 
     <TextView
-        android:id="@+id/reel3C"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="84dp"
-        android:layout_marginEnd="28dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/reel2B"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toTopOf="@+id/reel2C"
-        app:layout_constraintEnd_toStartOf="@+id/reel3B" />
-
-    <TextView
-        android:id="@+id/reel1C"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="72dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/reel2C"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/reel2A"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toTopOf="@+id/reel2B"
-        app:layout_constraintEnd_toStartOf="@+id/reel3A"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/reel1A"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
-
-    <TextView
-        android:id="@+id/reel3A"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toTopOf="@+id/reel3B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
-
-    <TextView
-        android:id="@+id/reel3B"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="28dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toTopOf="@+id/reel3C"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/reel2C"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="84dp"
-        android:layout_marginEnd="52dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/reel3C" />
-
-    <TextView
-        android:id="@+id/reel1A"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:textColorLink="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/reel1B"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="310dp"
         android:layout_height="55dp"
@@ -125,20 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.018" />
-
-    <TextView
-        android:id="@+id/reel1B"
-        android:layout_width="86dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toTopOf="@+id/reel1C"
-        app:layout_constraintEnd_toStartOf="@+id/reel2B"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/spin_button"
@@ -177,12 +59,82 @@
         android:id="@+id/status_box"
         android:layout_width="325dp"
         android:layout_height="29dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/reel2A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prompt" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/cherry"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/bar"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/diamond"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/lemon"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/lemon"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/cherry"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/diamond"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/orange"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/orange"
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="340dp" />
 </android.support.constraint.ConstraintLayout>

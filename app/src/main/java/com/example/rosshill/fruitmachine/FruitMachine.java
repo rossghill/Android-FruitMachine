@@ -96,7 +96,8 @@ public class FruitMachine {
 
     public int spin() {
 
-        playfield = getPlayField();
+        ArrayList<ArrayList<Symbol>> playfield = getPlayfield();
+        System.out.println(playfield);
         if (reel1.get(0).equals(reel2.get(1)) && reel1.get(1).equals(reel3.get(2))) {
             return win(reel1.get(0), reel2.get(1), reel3.get(2));
         } else if (reel1.get(1).equals(reel2.get(1)) && reel2.get(1).equals(reel3.get(1))) {
@@ -112,10 +113,13 @@ public class FruitMachine {
         int value1 = winningReel1.getValue();
         int value2 = winningReel2.getValue();
         int value3 = winningReel3.getValue();
+        System.out.println(value1 + value2 + value3);
         return value1 + value2 + value3;
+
     }
 
     public int lose() {
+        System.out.println("You lost");
         return 0;
     }
 }
