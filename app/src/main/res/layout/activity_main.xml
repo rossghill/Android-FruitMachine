@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/prompt" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/reel1-0"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/cherry"
@@ -75,7 +75,7 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/reel2-0"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/bar"
@@ -83,7 +83,7 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/reel3-0"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/diamond"
@@ -91,7 +91,7 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/reel1-1"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/lemon"
@@ -99,7 +99,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/reel2-1"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/lemon"
@@ -107,7 +107,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/reel3-1"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/cherry"
@@ -115,7 +115,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/reel1-2"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/diamond"
@@ -123,7 +123,7 @@
         tools:layout_editor_absoluteY="346dp" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/reel2-2"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/orange"
@@ -131,7 +131,7 @@
         tools:layout_editor_absoluteY="346dp" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/reel3-2"
         android:layout_width="95dp"
         android:layout_height="95dp"
         app:srcCompat="@drawable/orange"
