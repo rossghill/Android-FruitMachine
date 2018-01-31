@@ -22,16 +22,35 @@ public class Game {
         return "Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0";
     }
 
-    public void startGame() {
+    public String startGame(int randomReel1, int randomReel2, int randomReel3) {
         if (player.getWallet() > 0) {
             player.spendMoney(fruitMachine.getCost());
-            fruitMachine.getPlayfield();
-            fruitMachine.spin();
-        } else {
-
+            int winAmount = fruitMachine.spin(randomReel1, randomReel2, randomReel3);
+            if (winAmount > 0) {
+                player.receiveMoney(winAmount);
+                return "Congrats, you won £" + winAmount;
+                // TODO: 31/01/2018 add winnings to funds 
+            } else {
+                return "Sorry, you lost";
+            }
         }
+        return "Sorry, not enough funds";
     }
+
+//
+//    public String startGame() {
+//        if (player.getWallet() > 0) {
+//            player.spendMoney(fruitMachine.getCost());
+//            fruitMachine.getPlayfield();
+//            int winAmount = fruitMachine.spin();
+//            if (winAmount > 0) {
+//                return "Congrats, you won £" + winAmount;
+//            }
+//            else {
+//                return "Sorry, you lost";
+//            }
+//
+//        }
+
+
 }
-
-
-

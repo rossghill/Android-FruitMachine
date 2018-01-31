@@ -27,9 +27,8 @@
 
     <Button
         android:id="@+id/spin_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_width="89dp"
+        android:layout_height="39dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -38,8 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintTop_toBottomOf="@+id/reel2-2" />
 
     <TextView
         android:id="@+id/prompt"
@@ -75,7 +73,7 @@
         android:id="@+id/reel1-0"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status_box"
@@ -85,29 +83,33 @@
         android:id="@+id/reel2-0"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reel1-0"
         app:layout_constraintStart_toEndOf="@+id/reel1-0"
-        app:layout_constraintTop_toBottomOf="@+id/status_box"
+        app:layout_constraintTop_toTopOf="@+id/reel1-0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bar" />
 
     <ImageView
         android:id="@+id/reel3-0"
-        android:layout_width="95dp"
+        android:layout_width="96dp"
         android:layout_height="95dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/reel3-1"
+        app:layout_constraintBottom_toBottomOf="@+id/reel2-0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/reel2-0"
-        app:layout_constraintStart_toStartOf="@+id/reel3-1"
-        app:layout_constraintTop_toBottomOf="@+id/status_box"
+        app:layout_constraintTop_toTopOf="@+id/reel2-0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/diamond" />
 
     <ImageView
         android:id="@+id/reel1-1"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reel1-0"
         app:srcCompat="@drawable/lemon" />
@@ -116,50 +118,64 @@
         android:id="@+id/reel2-1"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reel1-1"
         app:layout_constraintStart_toEndOf="@+id/reel1-1"
-        app:layout_constraintTop_toBottomOf="@+id/reel2-0"
+        app:layout_constraintTop_toTopOf="@+id/reel1-1"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/lemon" />
 
     <ImageView
         android:id="@+id/reel3-1"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/reel3-2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reel2-1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/reel2-1"
-        app:layout_constraintStart_toStartOf="@+id/reel3-2"
-        app:layout_constraintTop_toBottomOf="@+id/reel3-0"
+        app:layout_constraintTop_toTopOf="@+id/reel2-1"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cherry" />
 
     <ImageView
         android:id="@+id/reel1-2"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reel1-1"
+        app:layout_constraintVertical_bias="0.275"
         app:srcCompat="@drawable/diamond" />
 
     <ImageView
         android:id="@+id/reel2-2"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/reel3-2"
-        app:layout_constraintHorizontal_bias="0.736"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reel1-2"
         app:layout_constraintStart_toEndOf="@+id/reel1-2"
-        app:layout_constraintTop_toBottomOf="@+id/reel2-1"
+        app:layout_constraintTop_toTopOf="@+id/reel1-2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/orange" />
 
     <ImageView
         android:id="@+id/reel3-2"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reel2-2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reel3-1"
+        app:layout_constraintStart_toEndOf="@+id/reel2-2"
+        app:layout_constraintTop_toTopOf="@+id/reel2-2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/orange" />
 
 
