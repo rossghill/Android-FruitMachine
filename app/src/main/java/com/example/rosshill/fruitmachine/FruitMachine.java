@@ -50,7 +50,7 @@ public class FruitMachine {
     }
 
 
-    public ArrayList<ArrayList<Symbol>> getPlayfield(int reel1random, int reel2random, int reel3random) {
+    public ArrayList<ArrayList<Symbol>> setupPlayfield(int reel1random, int reel2random, int reel3random) {
 // TODO: 31/01/2018 test it :D 
 // TODO: 31/01/2018 rename this method to setupPlayfield() 
         // TODO: 31/01/2018 method should create new property on fruitMachine
@@ -92,7 +92,6 @@ public class FruitMachine {
 
         return assignSelections(reel1, upperNeighbourPosition, randomPosition, lowerNeighbourPosition);
 
-
             }
 
     private ArrayList<Symbol> assignSelections(ArrayList<Symbol> reel, int upperNeighbourPosition, int middlePosition, int lowerNeighbourPosition) {
@@ -109,9 +108,8 @@ public class FruitMachine {
 
     public int spin(int reel1random, int reel2random, int reel3random) {
 
-        ArrayList<ArrayList<Symbol>> playfield = getPlayfield(reel1random, reel2random, reel3random);
-        
-//        
+        ArrayList<ArrayList<Symbol>> playfield = setupPlayfield(reel1random, reel2random, reel3random);
+
 
         Symbol topLeft = playfield.get(0).get(0);
         Symbol middle = playfield.get(1).get(1);
@@ -120,8 +118,6 @@ public class FruitMachine {
         Symbol middleRight = playfield.get(2).get(1);
         Symbol bottomLeft = playfield.get(0).get(2);
         Symbol topRight = playfield.get(2).get(0);
-
-
 
 
         boolean downDiagonalMatch = topLeft.name().equals(middle.name()) && middle.name().equals(bottomRight.name());

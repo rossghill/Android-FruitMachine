@@ -29,7 +29,7 @@
         tools:layout_editor_absoluteY="46dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/classic_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/classic_button"
@@ -39,7 +39,7 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/codeclan_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/codeclan_button"
