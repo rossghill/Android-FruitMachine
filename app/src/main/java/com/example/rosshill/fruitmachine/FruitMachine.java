@@ -32,8 +32,8 @@ public class FruitMachine {
         this.reel1.add(Symbol.CHERRY);
         this.reel1.add(Symbol.ORANGE);
         this.reel1.add(Symbol.ORANGE);
-        this.reel1.add(Symbol.BANANA);
-        this.reel1.add(Symbol.BANANA);
+        this.reel1.add(Symbol.LEMON);
+        this.reel1.add(Symbol.LEMON);
         this.reel1.add(Symbol.BAR);
         this.reel1.add(Symbol.GOLD);
         this.reel2 = new ArrayList<>(this.reel1);

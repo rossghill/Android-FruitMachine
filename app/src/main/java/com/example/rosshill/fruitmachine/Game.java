@@ -23,9 +23,11 @@ public class Game {
     }
 
     public void startGame() {
-        player.spendMoney(fruitMachine.getCost());
-        fruitMachine.getPlayfield();
-        fruitMachine.spin();
+        if (player.getWallet() > 0) {
+            player.spendMoney(fruitMachine.getCost());
+            fruitMachine.getPlayfield();
+            fruitMachine.spin();
+        }
     }
 }
 
