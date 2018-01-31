@@ -6,11 +6,11 @@ package com.example.rosshill.fruitmachine;
 
 public enum Symbol {
 
-    CHERRY(10),
-    ORANGE(25),
-    LEMON(50),
-    BAR  (100),
-    DIAMOND (250);
+    CHERRY(1),
+    ORANGE(2),
+    LEMON(5),
+    BAR  (10),
+    DIAMOND (60);
 
     private final int value;
 

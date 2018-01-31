@@ -29,12 +29,11 @@ public class Game {
             if (winAmount > 0) {
                 player.receiveMoney(winAmount);
                 return "Congrats, you won £" + winAmount;
-                // TODO: 31/01/2018 add winnings to funds 
             } else {
-                return "Sorry, you lost";
+                return "Sorry, no matching symbols";
             }
         }
-        return "Sorry, not enough funds";
+        return "Sorry, not enough funds.";
     }
 
 //
