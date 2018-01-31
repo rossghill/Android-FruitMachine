@@ -24,6 +24,7 @@
         android:inputType="textPersonName"
         android:text="@string/splash_welcome"
         android:textSize="24sp"
+        android:alpha="0.85"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="46dp" />
 
@@ -31,15 +32,17 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/classic_button"
         tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="305dp" />
+        tools:layout_editor_absoluteY="305dp"
+
+        />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/codeclan_button"
         tools:layout_editor_absoluteX="221dp"
         tools:layout_editor_absoluteY="305dp" />
 </android.support.constraint.ConstraintLayout>
