@@ -7,9 +7,12 @@
     <string name="cherry_symbol">Cherry</string>
     <string name="diamond_symbol">Diamond</string>
     <string name="wallet_text">Welcome  + player.getName() + ", your balance is " + player.getWallet()</string>
-    <string name ="prompt">Type SPIN to play or QUIT to end game</string>
+    <string name="prompt">Type SPIN to play or QUIT to end game</string>
 
-    <string name ="win_text">"Congrats! You won £"  + </string>
-    <string name ="lose_text">"Sorry, you lost this time"</string>
+    <string name="win_text">"Congrats! You won £"  + </string>
+    <string name="lose_text">"Sorry, you lost this time"</string>
     <string name="quit_text">"Thanks for playing! Your balance is £" + player.getWallet() + "0"</string>
+    <string name="splash_welcome">"Welcome to the Slots! \nGet ready to gamble (responsibly)!"</string>
+    <string name="classic_button">Classic</string>
+    <string name="codeclan_button">CodeClan</string>
 </resources>
