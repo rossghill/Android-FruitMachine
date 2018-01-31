@@ -14,6 +14,7 @@ public class Runner {
         Player player = new Player("Ross", 2.50);
         Game game = new Game(fruitMachine, player);
         System.out.println(game.fruitMachine.getPlayfield());
+        System.out.println(game.fruitMachine.spin());
 
     }
 }

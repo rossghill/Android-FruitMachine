@@ -38,6 +38,13 @@ public class GameTest {
     }
 
     @Test
+    public void playerCanSpendMoreMoney() {
+        game.startGame();
+        game.startGame();
+        assertEquals(1.50, game.player.getWallet(),0.01);
+    }
+
+    @Test
     public void fruitMachineCanAddReels() {
         assertEquals(10, game.fruitMachine.reel1.size());
         assertEquals(10, game.fruitMachine.reel2.size());
