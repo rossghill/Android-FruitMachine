@@ -106,18 +106,24 @@ public class FruitMachine {
 
         ArrayList<ArrayList<Symbol>> playfield = getPlayfield();
 
-        Symbol topLeft = playfield.get(0).get(0);
         Symbol middle = playfield.get(1).get(1);
+        Symbol topLeft = playfield.get(0).get(0);
+        Symbol topRight = playfield.get(2).get(0);
+        Symbol middleLeft = playfield.get(0).get(1);
+        Symbol middleRight = playfield.get(2).get(1);
+        Symbol bottomLeft = playfield.get(0).get(2);
         Symbol bottomRight = playfield.get(2).get(2);
 
         boolean downDiagonalMatch = topLeft.equals(middle) && middle.equals(bottomRight);
+        boolean middleDiagonalMatch = middleLeft.equals(middle) && middle.equals(middleRight);
+        boolean upDiagonalMatch = bottomLeft.equals(middle) && middle.equals(topRight);
 
 
         if (downDiagonalMatch) {
             return calculateWinnings(playfield.get(1).get(1));
-        } else if (playfield.get(0).get(1).equals(playfield.get(1).get(1)) && playfield.get(1).get(1).equals(playfield.get(2).get(1))) {
+        } else if (middleDiagonalMatch) {
             return calculateWinnings(playfield.get(1).get(1));
-        } else if (playfield.get(0).get(2).equals(playfield.get(1).get(1)) && playfield.get(1).get(1).equals(playfield.get(2).get(0))) {
+        } else if (upDiagonalMatch) {
             return calculateWinnings(playfield.get(1).get(1));
         } else {
             return lose();
