@@ -6,16 +6,14 @@ package com.example.rosshill.fruitmachine;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class FruitMachine {
 
     public ArrayList<Symbol> reel1;
     public ArrayList<Symbol> reel2;
     public ArrayList<Symbol> reel3;
-    
-    double cost;
+    public ArrayList<ArrayList<Symbol>> playfield;
+    public double cost;
 
 
     public FruitMachine(double cost) {
@@ -23,7 +21,7 @@ public class FruitMachine {
         this.reel2 = new ArrayList<>();
         this.reel3 = new ArrayList<>();
         this.cost = cost;
-//        this.playfield = null;
+        this.playfield = null;
         setupReels();
     }
 
@@ -49,25 +47,30 @@ public class FruitMachine {
         return cost;
     }
 
+    public ArrayList<ArrayList<Symbol>> getPlayfield() {
+        return playfield;
+    }
+
 
     public ArrayList<ArrayList<Symbol>> setupPlayfield(int reel1random, int reel2random, int reel3random) {
-// TODO: 31/01/2018 test it :D 
-// TODO: 31/01/2018 rename this method to setupPlayfield() 
-        // TODO: 31/01/2018 method should create new property on fruitMachine
-        // TODO: 31/01/2018 create getter for playfield and use it in MainActivity 
+
+
+        // TODO: 31/01/2018 test it :D
 
 
         ArrayList<Symbol> reel1selection = assignPosition(reel1random);
         ArrayList<Symbol> reel2selection = assignPosition(reel2random);
         ArrayList<Symbol> reel3selection = assignPosition(reel3random);
 
-        ArrayList<ArrayList<Symbol>> playfield = new ArrayList<ArrayList<Symbol>>();
+        ArrayList<ArrayList<Symbol>> createdPlayfield = new ArrayList<>();
 
-        playfield.add(reel1selection);
-        playfield.add(reel2selection);
-        playfield.add(reel3selection);
-        
-        return playfield;
+        createdPlayfield.add(reel1selection);
+        createdPlayfield.add(reel2selection);
+        createdPlayfield.add(reel3selection);
+
+        this.playfield = createdPlayfield;
+
+        return createdPlayfield;
     }
 
     public ArrayList<Symbol> assignPosition(int random) {
@@ -108,16 +111,16 @@ public class FruitMachine {
 
     public int spin(int reel1random, int reel2random, int reel3random) {
 
-        ArrayList<ArrayList<Symbol>> playfield = setupPlayfield(reel1random, reel2random, reel3random);
+        setupPlayfield(reel1random, reel2random, reel3random);
 
 
-        Symbol topLeft = playfield.get(0).get(0);
-        Symbol middle = playfield.get(1).get(1);
-        Symbol bottomRight = playfield.get(2).get(2);
-        Symbol middleLeft = playfield.get(0).get(1);
-        Symbol middleRight = playfield.get(2).get(1);
-        Symbol bottomLeft = playfield.get(0).get(2);
-        Symbol topRight = playfield.get(2).get(0);
+        Symbol topLeft = this.playfield.get(0).get(0);
+        Symbol middle = this.playfield.get(1).get(1);
+        Symbol bottomRight = this.playfield.get(2).get(2);
+        Symbol middleLeft = this.playfield.get(0).get(1);
+        Symbol middleRight = this.playfield.get(2).get(1);
+        Symbol bottomLeft = this.playfield.get(0).get(2);
+        Symbol topRight = this.playfield.get(2).get(0);
 
 
         boolean downDiagonalMatch = topLeft.name().equals(middle.name()) && middle.name().equals(bottomRight.name());

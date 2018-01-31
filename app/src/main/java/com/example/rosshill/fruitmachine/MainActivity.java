@@ -34,32 +34,30 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSpinButtonClick(View spinButton) {
 
-//        setUpReelImages(fruitmachine)
-//        checkForWinnings()
         Random random = new Random();
-        int randomReel1 = random.nextInt(10);
-        int randomReel2 = random.nextInt(10);
-        int randomReel3 = random.nextInt(10);
+        int randomReel1 = random.nextInt(fruitMachine.reel1.size());
+        int randomReel2 = random.nextInt(fruitMachine.reel1.size());
+        int randomReel3 = random.nextInt(fruitMachine.reel1.size());
         String result = new_game.startGame(randomReel1, randomReel2, randomReel3);
 
         ImageView reel10img = findViewById(R.id.reel1_0);
-        reel10img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(0).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel10img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(0).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel11img = findViewById(R.id.reel1_1);
-        reel11img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(0).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel11img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(0).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel12img = findViewById(R.id.reel1_2);
-        reel12img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(0).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel12img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(0).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel20img = findViewById(R.id.reel2_0);
-        reel20img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(1).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel20img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(1).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel21img = findViewById(R.id.reel2_1);
-        reel21img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(1).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel21img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(1).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel22img = findViewById(R.id.reel2_2);
-        reel22img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(1).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel22img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(1).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel30img = findViewById(R.id.reel3_0);
-        reel30img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(2).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel30img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(0).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel31img = findViewById(R.id.reel3_1);
-        reel31img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(2).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel31img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(1).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
         ImageView reel32img = findViewById(R.id.reel3_2);
-        reel32img.setImageResource(getResources().getIdentifier(fruitMachine.setupPlayfield(randomReel1, randomReel2, randomReel3).get(2).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
+        reel32img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
 
 //
               welcomeBox = findViewById(R.id.textView);

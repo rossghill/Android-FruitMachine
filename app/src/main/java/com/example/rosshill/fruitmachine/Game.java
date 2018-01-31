@@ -4,10 +4,6 @@ package com.example.rosshill.fruitmachine;
  * Created by rosshill on 28/01/2018.
  */
 
-import java.util.Scanner;
-
-import static java.lang.Character.toUpperCase;
-
 public class Game {
 
     FruitMachine fruitMachine;
@@ -35,21 +31,4 @@ public class Game {
         }
         return "Sorry, not enough funds.";
     }
-
-//
-//    public String startGame() {
-//        if (player.getWallet() > 0) {
-//            player.spendMoney(fruitMachine.getCost());
-//            fruitMachine.getPlayfield();
-//            int winAmount = fruitMachine.spin();
-//            if (winAmount > 0) {
-//                return "Congrats, you won £" + winAmount;
-//            }
-//            else {
-//                return "Sorry, you lost";
-//            }
-//
-//        }
-
-
 }

@@ -15,18 +15,22 @@ public class Player {
     }
 
     public String getName() {
-        return player_name;
+        return this.player_name;
+    }
+
+    public String setName(String name) {
+        return this.player_name = name;
     }
 
     public double getWallet() {
-        return wallet;
+        return this.wallet;
     }
 
     public double spendMoney(double gameCost) {
-        return wallet -= gameCost;
+        return this.wallet -= gameCost;
     }
 
     public double receiveMoney(int winAmount) {
-        return wallet += winAmount;
+        return this.wallet += winAmount;
     }
 }
