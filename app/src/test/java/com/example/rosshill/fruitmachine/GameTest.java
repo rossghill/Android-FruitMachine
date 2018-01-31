@@ -17,7 +17,7 @@ public class GameTest {
 
     @Before
     public void before() {
-    fruitMachine = new FruitMachine();
+    fruitMachine = new FruitMachine(0.50);
     player = new Player("Ross", 2.50);
     game = new Game(fruitMachine, player);}
 

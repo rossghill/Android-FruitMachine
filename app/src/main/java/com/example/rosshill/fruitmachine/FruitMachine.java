@@ -14,12 +14,14 @@ public class FruitMachine {
     public ArrayList<Symbol> reel1;
     public ArrayList<Symbol> reel2;
     public ArrayList<Symbol> reel3;
+    double cost;
 
 
-    public FruitMachine() {
+    public FruitMachine(double cost) {
         this.reel1 = new ArrayList<>();
         this.reel2 = new ArrayList<>();
         this.reel3 = new ArrayList<>();
+        this.cost = cost;
         setupReels();
     }
 
@@ -41,15 +43,20 @@ public class FruitMachine {
         Collections.shuffle(reel3);
     }
 
+    public double getCost() {
+        return cost;
+    }
+
+
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
 // TODO: 30/01/2018 make the function take in the random numbers so its testable
 
 
-        ArrayList reel1selection = assignPosition();
-        ArrayList reel2selection = assignPosition();
-        ArrayList reel3selection = assignPosition();
+        ArrayList<Symbol> reel1selection = assignPosition();
+        ArrayList<Symbol> reel2selection = assignPosition();
+        ArrayList<Symbol> reel3selection = assignPosition();
 
-        ArrayList playfield = new ArrayList<ArrayList>();
+        ArrayList<ArrayList<Symbol>> playfield = new ArrayList<ArrayList<Symbol>>();
 
         playfield.add(reel1selection);
         playfield.add(reel2selection);
@@ -58,35 +65,47 @@ public class FruitMachine {
         return playfield;
     }
 
-    public ArrayList assignPosition() {
+    public ArrayList<Symbol> assignPosition() {
         Random random = new Random();
-        int randomPosition = random.nextInt (reel1.size());
-        int upperNeighbour;
-        int lowerNeighbour;
-        ArrayList reelselection = new ArrayList();
+        int randomPosition = random.nextInt(reel1.size());
+        int upperNeighbourPosition;
+        int lowerNeighbourPosition;
+        ArrayList<Symbol> reelSelection = new ArrayList();
 
         if (randomPosition == 0) {
-            upperNeighbour = reel1.size();
-            lowerNeighbour = randomPosition + 1;}
+            upperNeighbourPosition = reel1.size();
+            lowerNeighbourPosition = randomPosition + 1;}
         else if (randomPosition == reel1.size() - 1)  {
-            upperNeighbour = randomPosition - 1;
-            lowerNeighbour = 0;}
+            upperNeighbourPosition = randomPosition - 1;
+            lowerNeighbourPosition = 0;}
         else {
-            upperNeighbour = randomPosition - 1;
-            lowerNeighbour = randomPosition + 1;
+            upperNeighbourPosition = randomPosition - 1;
+            lowerNeighbourPosition = randomPosition + 1;
         }
 
-        reelselection.add(upperNeighbour);
-        reelselection.add(randomPosition);
-        reelselection.add(lowerNeighbour);
+        Symbol upperSymbol = reelSelection.get(upperNeighbourPosition);
+        reelSelection.add(upperSymbol);
+        Symbol middleSymbol = reelSelection.get(randomPosition);
+        reelSelection.add(middleSymbol);
+        Symbol lowerSymbol = reelSelection.get(lowerNeighbourPosition);
+        reelSelection.add(lowerSymbol);
 
-        return reelselection;
+
+        return reelSelection;
             }
 
     public int spin() {
 
         ArrayList<ArrayList<Symbol>> playfield = getPlayfield();
-        if (playfield.get(0).get(0).equals(playfield.get(1).get(1)) && playfield.get(1).get(1).equals(playfield.get(2).get(2))) {
+
+        Symbol topLeft = playfield.get(0).get(0);
+        Symbol middle = playfield.get(1).get(1);
+        Symbol bottomRight = playfield.get(2).get(2);
+
+        boolean downDiagonalMatch = topLeft.equals(middle) && middle.equals(bottomRight);
+
+
+        if (downDiagonalMatch) {
             return calculateWinnings(playfield.get(1).get(1));
         } else if (playfield.get(0).get(1).equals(playfield.get(1).get(1)) && playfield.get(1).get(1).equals(playfield.get(2).get(1))) {
             return calculateWinnings(playfield.get(1).get(1));

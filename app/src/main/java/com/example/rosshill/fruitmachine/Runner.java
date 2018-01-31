@@ -10,7 +10,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        FruitMachine fruitMachine = new FruitMachine();
+        FruitMachine fruitMachine = new FruitMachine(0.50);
         Player player = new Player("Ross", 2.50);
         Game game = new Game(fruitMachine, player);
         System.out.println(game.fruitMachine.getPlayfield());
