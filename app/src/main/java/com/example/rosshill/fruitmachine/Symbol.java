@@ -10,7 +10,7 @@ public enum Symbol {
     ORANGE(25),
     LEMON(50),
     BAR  (100),
-    GOLD (250);
+    DIAMOND (250);
 
     private final int value;
 

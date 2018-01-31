@@ -35,7 +35,7 @@ public class FruitMachine {
         this.reel1.add(Symbol.LEMON);
         this.reel1.add(Symbol.LEMON);
         this.reel1.add(Symbol.BAR);
-        this.reel1.add(Symbol.GOLD);
+        this.reel1.add(Symbol.DIAMOND);
         this.reel2 = new ArrayList<>(this.reel1);
         this.reel3 = new ArrayList<>(this.reel1);
         Collections.shuffle(reel1);
@@ -102,7 +102,7 @@ public class FruitMachine {
         return reelSelection;
     }
 
-    public int spin() {
+    public String spin() {
 
         ArrayList<ArrayList<Symbol>> playfield = getPlayfield();
 
@@ -130,11 +130,11 @@ public class FruitMachine {
         }
     }
 
-    public int calculateWinnings(Symbol symbol) {
-        return symbol.getValue() * 3;
+    public String calculateWinnings(Symbol symbol) {
+        return "Congrats! You've won £" + symbol.getValue() * 3 + "0";
     }
 
-    public int lose() {
-        return 0;
+    public String lose() {
+        return "Sorry, no matching symbols";
     }
 }
