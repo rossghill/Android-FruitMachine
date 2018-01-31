@@ -70,29 +70,37 @@ public class FruitMachine {
         int randomPosition = random.nextInt(reel1.size());
         int upperNeighbourPosition;
         int lowerNeighbourPosition;
-        ArrayList<Symbol> reelSelection = new ArrayList();
+
 
         if (randomPosition == 0) {
-            upperNeighbourPosition = reel1.size();
-            lowerNeighbourPosition = randomPosition + 1;}
+            upperNeighbourPosition = reel1.size() - 1;
+            lowerNeighbourPosition = randomPosition + 1;
+        }
         else if (randomPosition == reel1.size() - 1)  {
             upperNeighbourPosition = randomPosition - 1;
-            lowerNeighbourPosition = 0;}
+            lowerNeighbourPosition = 0;
+        }
         else {
             upperNeighbourPosition = randomPosition - 1;
             lowerNeighbourPosition = randomPosition + 1;
         }
 
-        Symbol upperSymbol = reelSelection.get(upperNeighbourPosition);
-        reelSelection.add(upperSymbol);
-        Symbol middleSymbol = reelSelection.get(randomPosition);
-        reelSelection.add(middleSymbol);
-        Symbol lowerSymbol = reelSelection.get(lowerNeighbourPosition);
-        reelSelection.add(lowerSymbol);
+        return assignSelections(reel1, upperNeighbourPosition, randomPosition, lowerNeighbourPosition);
 
 
-        return reelSelection;
             }
+
+    private ArrayList<Symbol> assignSelections(ArrayList<Symbol> reel, int upperNeighbourPosition, int middlePosition, int lowerNeighbourPosition) {
+        ArrayList<Symbol> reelSelection = new ArrayList();
+
+        Symbol upperSymbol = reel.get(upperNeighbourPosition);
+        reelSelection.add(upperSymbol);
+        Symbol middleSymbol = reel.get(middlePosition);
+        reelSelection.add(middleSymbol);
+        Symbol lowerSymbol = reel.get(lowerNeighbourPosition);
+        reelSelection.add(lowerSymbol);
+        return reelSelection;
+    }
 
     public int spin() {
 
