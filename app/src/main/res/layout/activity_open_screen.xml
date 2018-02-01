@@ -16,6 +16,7 @@
 
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="onBeginButtonClicked"
         android:text="@string/begin_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +52,7 @@
         android:alpha="0.8"
         android:background="@android:color/black"
         android:ems="10"
+        android:fontFamily="sans-serif"
         android:inputType="textPersonName"
         android:text="@string/splash_welcome"
         android:textAlignment="center"
@@ -58,6 +60,7 @@
         android:textColor="@android:color/holo_orange_dark"
         android:textColorLink="@android:color/black"
         android:textStyle="bold"
+        android:typeface="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

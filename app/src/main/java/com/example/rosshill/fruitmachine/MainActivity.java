@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-//        player1.setName();
+        String name = extras.getString("name");
+        player1.setName(name);
 
     }
 
