@@ -59,15 +59,12 @@ public class MainActivity extends AppCompatActivity {
         ImageView reel32img = findViewById(R.id.reel3_2);
         reel32img.setImageResource(getResources().getIdentifier(fruitMachine.getPlayfield().get(2).get(2).name().toLowerCase(), "drawable", "com.example.rosshill.fruitmachine"));
 
-//
               welcomeBox = findViewById(R.id.textView);
               welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
 
               statusBox = findViewById(R.id.status_box);
               statusBox.setText(String.valueOf(result));
-//
-////
-//
+
         }
     }
 

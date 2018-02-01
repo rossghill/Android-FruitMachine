@@ -7,12 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.app.Activity;
+import android.widget.TextView;
 
 
 public class OpenScreen extends AppCompatActivity {
 
+    TextView welcomeText;
     EditText nameText;
     Button begin_button;
+    Player player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +27,11 @@ public class OpenScreen extends AppCompatActivity {
 
     public void onBeginButtonClicked(View begin_button) {
 
-        Intent intent = new Intent(this, MainActivity.class);
-
-        intent.putExtra("name", nameText);
+//        player.setName();
+//
+//        Intent intent = new Intent(this, MainActivity.class);
+//
+//        intent.putExtra("name", nameText);
     }
 
 
