@@ -25,6 +25,14 @@ public class FruitMachine {
         setupReels();
     }
 
+    public double getCost() {
+        return this.cost;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
     public void setupReels() {
         this.reel1.add(Symbol.CHERRY);
         this.reel1.add(Symbol.CHERRY);
@@ -43,9 +51,6 @@ public class FruitMachine {
         Collections.shuffle(reel3);
     }
 
-    public double getCost() {
-        return cost;
-    }
 
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
         return playfield;

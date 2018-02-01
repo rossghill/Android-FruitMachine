@@ -28,14 +28,16 @@ public class MainActivity extends AppCompatActivity {
         player1 = new Player("Ross", 2.50);
         new_game = new Game(fruitMachine, player1);
 
-        welcomeBox = findViewById(R.id.textView);
-        welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
         String name = extras.getString("name");
         player1.setName(name);
+
+
+        welcomeBox = findViewById(R.id.textView);
+        welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
 
     }
 

@@ -28,12 +28,26 @@ public class OpenScreen extends AppCompatActivity {
     public void onBeginButtonClicked(View begin_button) {
 
         String enteredName = nameText.getText().toString();
+        double wallet_funds = 2.00;
 //
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("name", enteredName);
+        intent.putExtra("wallet_funds", wallet_funds);
 
         startActivity(intent);
     }
 
+    public void onBigWalletButtonClicked(View bigbet_button) {
+
+        String enteredName = nameText.getText().toString();
+        double wallet_funds = 5.00;
+
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("name", enteredName);
+        intent.putExtra("wallet_funds", wallet_funds);
+
+        startActivity(intent);
+
+    }
 
 }
