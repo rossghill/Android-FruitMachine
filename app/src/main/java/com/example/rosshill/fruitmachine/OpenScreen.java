@@ -27,11 +27,13 @@ public class OpenScreen extends AppCompatActivity {
 
     public void onBeginButtonClicked(View begin_button) {
 
-//        player.setName();
+        String enteredName = player.getName();
 //
-//        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
 //
-//        intent.putExtra("name", nameText);
+        intent.putExtra("name", enteredName);
+
+        startActivity(intent);
     }
 
 

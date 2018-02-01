@@ -1,6 +1,7 @@
 package com.example.rosshill.fruitmachine;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
         welcomeBox = findViewById(R.id.textView);
         welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+
+//        player1.setName();
 
     }
 

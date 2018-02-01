@@ -27,14 +27,19 @@
         android:id="@+id/name"
         android:layout_width="224dp"
         android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
         android:alpha="0.8"
         android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_dark"
         android:ems="10"
         android:hint="Please enter your name"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="321dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameprompt" />
 
     <TextView
         android:id="@+id/welcomeText"
@@ -60,13 +65,19 @@
 
     <TextView
         android:id="@+id/nameprompt"
-        android:layout_width="152dp"
-        android:layout_height="51dp"
+        android:layout_width="249dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="112dp"
         android:alpha="0.8"
         android:background="@android:color/black"
-        android:text="@str"
+        android:text="@string/enter_name"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="199dp" />
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 </android.support.constraint.ConstraintLayout>
