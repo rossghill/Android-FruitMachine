@@ -29,8 +29,8 @@ public class FruitMachine {
         return this.cost;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public double setCost(double cost) {
+        return this.cost = cost;
     }
 
     public void setupReels() {

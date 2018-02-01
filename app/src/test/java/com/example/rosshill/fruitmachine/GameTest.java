@@ -31,6 +31,16 @@ public class GameTest {
         assertEquals(2.50, game.player.getWallet(), 0.01);
     }
 
+    @Test
+    public void canGetFruitMachineCost() {
+        assertEquals(0.50, game.fruitMachine.getCost(), 0.01);
+    }
+
+    @Test
+    public void canSetFruitMachineCost() {
+        assertEquals(5.00, game.fruitMachine.setCost(5.00), 0.01);
+    }
+
 //    @Test
 //    public void playerCanSpendMoney() {
 //        game.startGame(1,1,1);
@@ -53,8 +63,8 @@ public class GameTest {
 
     @Test
     public void fruitMachineSetsThreeReelArrays() {
-        // TODO: 31/01/2018 call setupplayfield first 
-//        assertEquals(3, game.fruitMachine.getPlayfield().size());
+        game.fruitMachine.setupPlayfield(5,5, 5);
+        assertEquals(3, game.fruitMachine.getPlayfield().size());
     }
 
     @Test
