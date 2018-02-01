@@ -6,9 +6,8 @@
     <string name="lemon_symbol">Lemon</string>
     <string name="cherry_symbol">Cherry</string>
     <string name="diamond_symbol">Diamond</string>
-    <string name="wallet_text">Welcome  + player.getName() + ", your balance is " + player.getWallet()</string>
-    <string name="prompt">£0.50 per game. Hit SPIN to play</string>
-
+    <string name="wallet_text">player.getName() + ", your balance is " + player.getWallet()</string>
+    <string name="prompt">Hit SPIN to play. £0.50 per game.</string>
     <string name="win_text">"Congrats! You won £"  + </string>
     <string name="lose_text">"Sorry, you lost this time"</string>
     <string name="quit_text">"Thanks for playing! Your balance is £" + player.getWallet() + "0"</string>

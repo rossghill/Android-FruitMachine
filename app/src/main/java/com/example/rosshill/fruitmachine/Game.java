@@ -15,7 +15,7 @@ public class Game {
     }
 
     public String welcomeMessage() {
-        return "Welcome " + player.getName() + ", your balance is £" + player.getWallet() + "0";
+        return player.getName() + ", your balance is £" + player.getWallet() + "0";
     }
 
     public String startGame(int randomReel1, int randomReel2, int randomReel3) {
