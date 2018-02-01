@@ -11,8 +11,7 @@
     <string name="win_text">"Congrats! You won £"  + </string>
     <string name="lose_text">"Sorry, you lost this time"</string>
     <string name="quit_text">"Thanks for playing! Your balance is £" + player.getWallet() + "0"</string>
-    <string name="splash_welcome">"Welcome to the Slots!"</string>
+    <string name="splash_welcome">Welcome to the slots!</string>
     <string name="enter_name">Please enter your name</string>
     <string name="begin_button">Begin</string>
-    <string name="bigbet_button"></string>
 </resources>
