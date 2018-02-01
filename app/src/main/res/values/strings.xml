@@ -15,4 +15,5 @@
     <string name="splash_welcome">"Welcome to the Slots!"</string>
     <string name="enter_name">Please enter your name</string>
     <string name="begin_button">Begin</string>
+    <string name="bigbet_button"></string>
 </resources>

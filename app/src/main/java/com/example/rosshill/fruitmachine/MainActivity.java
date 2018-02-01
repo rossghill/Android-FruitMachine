@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         fruitMachine = new FruitMachine(0.50);
 
-        player1 = new Player("Ross", 2.50);
+        player1 = new Player("Ross", 3.00);
         new_game = new Game(fruitMachine, player1);
 
 
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         String name = extras.getString("name");
         player1.setName(name);
+        Double game_cost = extras.getDouble("game_cost");
+        fruitMachine.setCost(game_cost);
 
 
         welcomeBox = findViewById(R.id.textView);

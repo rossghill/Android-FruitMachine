@@ -15,6 +15,7 @@ public class OpenScreen extends AppCompatActivity {
     TextView welcomeText;
     EditText nameText;
     Button begin_button;
+    Button bigbet_button;
     Player player;
 
     @Override
@@ -28,23 +29,23 @@ public class OpenScreen extends AppCompatActivity {
     public void onBeginButtonClicked(View begin_button) {
 
         String enteredName = nameText.getText().toString();
-        double wallet_funds = 2.00;
+        double gameCost = 0.50;
 //
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("name", enteredName);
-        intent.putExtra("wallet_funds", wallet_funds);
+        intent.putExtra("game_cost", gameCost);
 
         startActivity(intent);
     }
 
-    public void onBigWalletButtonClicked(View bigbet_button) {
+    public void onBigBetButtonClicked(View bigbet_button) {
 
         String enteredName = nameText.getText().toString();
-        double wallet_funds = 5.00;
+        double gameCost = 1.00;
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("name", enteredName);
-        intent.putExtra("wallet_funds", wallet_funds);
+        intent.putExtra("game_cost", gameCost);
 
         startActivity(intent);
 
