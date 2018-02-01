@@ -1,6 +1,5 @@
 package com.example.rosshill.fruitmachine;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,10 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         fruitMachine = new FruitMachine(0.50);
-
         player1 = new Player("Ross", 3.00);
         new_game = new Game(fruitMachine, player1);
-
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -37,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
         Double game_cost = extras.getDouble("game_cost");
         fruitMachine.setCost(game_cost);
 
-
         welcomeBox = findViewById(R.id.textView);
         welcomeBox.setText(String.valueOf(new_game.welcomeMessage()));
-
     }
 
     public void onSpinButtonClick(View spinButton) {

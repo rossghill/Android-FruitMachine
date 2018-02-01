@@ -51,17 +51,11 @@ public class FruitMachine {
         Collections.shuffle(reel3);
     }
 
-
     public ArrayList<ArrayList<Symbol>> getPlayfield() {
         return playfield;
     }
 
-
     public ArrayList<ArrayList<Symbol>> setupPlayfield(int reel1random, int reel2random, int reel3random) {
-
-
-        // TODO: 31/01/2018 test it :D
-
 
         ArrayList<Symbol> reel1selection = assignPosition(reel1random);
         ArrayList<Symbol> reel2selection = assignPosition(reel2random);
@@ -99,7 +93,6 @@ public class FruitMachine {
         }
 
         return assignSelections(reel1, upperNeighbourPosition, randomPosition, lowerNeighbourPosition);
-
             }
 
     private ArrayList<Symbol> assignSelections(ArrayList<Symbol> reel, int upperNeighbourPosition, int middlePosition, int lowerNeighbourPosition) {
@@ -118,7 +111,6 @@ public class FruitMachine {
 
         setupPlayfield(reel1random, reel2random, reel3random);
 
-
         Symbol topLeft = this.playfield.get(0).get(0);
         Symbol middle = this.playfield.get(1).get(1);
         Symbol bottomRight = this.playfield.get(2).get(2);
@@ -127,11 +119,9 @@ public class FruitMachine {
         Symbol bottomLeft = this.playfield.get(0).get(2);
         Symbol topRight = this.playfield.get(2).get(0);
 
-
         boolean downDiagonalMatch = topLeft.name().equals(middle.name()) && middle.name().equals(bottomRight.name());
         boolean middleDiagonalMatch = middleLeft.name().equals(middle.name()) && middle.name().equals(middleRight.name());
         boolean upDiagonalMatch = bottomLeft.name().equals(middle.name()) && middle.name().equals(topRight.name());
-
 
         if (downDiagonalMatch) {
             return calculateWinnings(playfield.get(1).get(1));

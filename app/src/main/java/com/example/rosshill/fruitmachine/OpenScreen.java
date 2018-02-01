@@ -12,10 +12,8 @@ import android.widget.TextView;
 
 public class OpenScreen extends AppCompatActivity {
 
-    TextView welcomeText;
     EditText nameText;
     Button begin_button;
-    Button bigbet_button;
     Player player;
 
     @Override
@@ -36,19 +34,6 @@ public class OpenScreen extends AppCompatActivity {
         intent.putExtra("game_cost", gameCost);
 
         startActivity(intent);
-    }
-
-    public void onBigBetButtonClicked(View bigbet_button) {
-
-        String enteredName = nameText.getText().toString();
-        double gameCost = 1.00;
-
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("name", enteredName);
-        intent.putExtra("game_cost", gameCost);
-
-        startActivity(intent);
-
     }
 
 }

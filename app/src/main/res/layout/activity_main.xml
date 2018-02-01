@@ -94,10 +94,10 @@
         android:layout_height="95dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/reel1-0"
         app:layout_constraintStart_toEndOf="@+id/reel1-0"
-        app:layout_constraintTop_toTopOf="@+id/reel1-0"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/status_box"
         app:srcCompat="@drawable/bar" />
 
     <ImageView
@@ -106,11 +106,10 @@
         android:layout_height="95dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/reel2-0"
         app:layout_constraintStart_toEndOf="@+id/reel2-0"
-        app:layout_constraintTop_toTopOf="@+id/reel2-0"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/status_box"
         app:srcCompat="@drawable/diamond" />
 
     <ImageView
