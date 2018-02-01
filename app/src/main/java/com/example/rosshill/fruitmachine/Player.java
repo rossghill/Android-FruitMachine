@@ -26,6 +26,10 @@ public class Player {
         return this.wallet;
     }
 
+    public double setWallet(double funds) {
+        return this.wallet = funds;
+    }
+
     public double spendMoney(double gameCost) {
         return this.wallet -= gameCost;
     }
